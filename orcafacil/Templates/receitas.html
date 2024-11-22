@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Orça Fácil</title>
+</head>
+<body>
+    
+    <section class="alturasection1">
+        <header>
+            <div>
+                <img class="logo " src="static/img/logoooo.png">
+    
+    
+            </div>
+            <DIV class="div-btn" >
+                <a class="botao-cabecalho right" href="{{ url_for('principal') }}" >Home</a>
+                <a class="botao-cabecalho right" href="{{ url_for('receitas') }}" >Receitas</a>
+                <a class="botao-cabecalho right" href="{{ url_for('despesas') }}" >Despesas</a>
+                <a class="btn-login botao-cabecalho" href="{{ url_for('login') }}" >SAIR</a>
+            </DIV>
+        </header>
+
+        <h1 class="tit1 center">
+            REGISTRE SUAS <span class="bold" >RECEITAS</span>
+        </h1>
+    
+            <div class=" div-form">
+            <form action="{{ url_for('receitas') }}" method="post">
+                <label >Valor da sua última receita</label><br>
+                <input class="center" type="number" id="valor_ultima_receitas" name="valor" required>
+                <label>Fonte da sua última receita</label><br>
+                <input class="center" type="text" id="fonte_ultima_receitas" name="fonte" required>
+                <label>Data da sua última receita</label><br>
+                <input class="center" type="date" id="data_ultima_receitas" name="data" required>
+                <button class="btn-form center" type="submit">REGISTRAR</button>
+            </form>
+            </div>
+    </section>
+    
+
+        <section class="fundo-img" >
+            <h2 class="center tit2">
+                <span class="bold" >HISTÓRICO</span> DE RECEITAS
+            </h2>
+            {% for receita in receitas %}
+            <container class="d-flex center margin-cnt" style="padding-bottom: 20px" >
+                <div class="center">
+                    <p class="center p1" >Valor: {{ receita[1] }}<br>
+                        Fonte: {{ receita[2] }}<br>
+                        Data: {{ receita[3] }}</p>
+                </div>
+
+                <div>
+
+                    <a class="btn-login1" href="{{ url_for('editar' , id=receita[0]) }}">EDITAR</a> <br>
+                    <form action="{{ url_for('deletar', id=receita[0]) }}" method="post" style="display:inline;">
+                        <button class="btn-login2" type="submit">APAGAR</button>
+                    </form>
+                </div>
+            </container>
+            {% endfor %}
+        </section>
+
+
+            <section class="bc-fbxo center">
+                <h2 class="center tit1">
+                    Em poucas palavras <span class="bold" >OrçaFácil é o<br>melhor</span> sistema de <span class="bold" >gestão financeira.</span>
+                </h2>
+                <form action="{{ url_for('principal') }}" method="post">
+                <button class="btn-login3 botao-cabecalho">VOLTAR PARA HOME</button>
+                </form>
+                <p class="p2" >Verifique agora seu Saldo.</p>
+            </section>
+
+            <section class="bc-white">
+                <div>
+                    <container class="ctntpc center d-flex" >
+                        <div class="" >
+                            <img class="center img-tpc " src="static/img/1.png">
+                            <div>
+                                <p class="p12">Simples e completo</p><br>
+                                <p class="p3">Tudo o que você precisa para<br>uma boa gestão financeira.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img class=" img-tpc" src="static/img/2.png">
+                            <div>
+                                <p class="p12">Melhore suas finanças</p><br>
+                                <p class="p3">Observe sua finanças e<br>melhore seu saldo.</p>
+                            </div>
+                        </div>
+
+                        <div>
+                            <img class=" img-tpc" src="static/img/3.png">
+                            <div>
+                                <p class="p12">Fácil de usar</p><br>
+                                <p class="p3">Super intuitivo! Descomplicar<br>é o nosso foco.</p>
+                            </div>
+
+                        </div>
+
+                        
+                    </container>
+
+                </div>
+            </section>
+
+            <footer class="rodape">
+                <div class="conteudo-rodape">
+                    <img src="static/img/logoooo.png" alt="Logo OrçaFácil" class="logo-rodape">
+                </div>
+                <p>©2024 - Todos os direitos reservados</p>
+            </footer>
+
+
+
+</body>
+</html>

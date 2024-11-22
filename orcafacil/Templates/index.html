@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+    <title>Orça Fácil</title>
+</head>
+<body>
+    <header>
+        <div>
+            <img class="logo " src="static/img/logoooo.png">
+
+        </div>
+        <DIV class="div-btn" >
+            <a class="botao-cabecalho right" href="{{ url_for('principal') }}" >Home</a>
+            <a class="botao-cabecalho right" href="{{ url_for('receitas') }}" >Receitas</a>
+            <a class="botao-cabecalho right" href="{{ url_for('despesas') }}" >Despesas</a>
+            <a class="btn-login botao-cabecalho" href="{{ url_for('logout') }}" >SAIR</a>
+        </DIV>
+    </header>
+
+    <h2 class="tit1 center m-ola">Olá, <span class="m-ola1">{{ nome }}</span></h2>
+
+
+    <h1 class="tit1 center">
+        SEU <span class="bold" >SALDO</span>
+    </h1>
+    <h2 class="tit222 center" >R${{saldo}}</h2>
+
+            <div class="center div-btn" >
+                <a class="btn-login6 botao-home" href="{{ url_for('receitas') }}" >REGISTRAR RECEITA</a> 
+                
+            </div>
+
+            <div class="center div-btn">
+                <a class="btn-login6 botao-home" href="{{ url_for('despesas') }}" >REGISTRAR DESPESA</a>
+            </div>
+
+            <footer class="rodape">
+                <div class="conteudo-rodape">
+                    <img src="static/img/logoooo.png" alt="Logo OrçaFácil" class="logo-rodape">
+                </div>
+                <p>©2024 - Todos os direitos reservados</p>
+            </footer>
+
+</body>
+</html>

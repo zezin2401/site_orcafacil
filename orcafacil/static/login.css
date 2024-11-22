@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.logo-login {
+    width: 220px;
+    margin-left: 14px;
+    margin-top: 5px;
+}
+
+.tit1 {
+    font-family: poppins;
+    font-size: 1.7em;
+    font-weight:600;
+    margin-top: 40px;
+    margin-left: 35px;
+}
+
+.div1login {
+    width: 50%;
+    margin-left: 40px;
+
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+
+}
+
+.label-lgn {
+    width: 450px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: white;
+    margin-left: 35px;
+    font-family: poppins;
+    color: black;
+    border: 1 black
+}
+
+.txt-form {
+    font-family: poppins;
+    margin-left: 35px;
+    color:black
+}
+
+.btn-lgn {
+    width: 453px;
+    border: none;
+    background-color: #6366F1;
+    font-family: poppins;
+    color: white;
+    height: 40px;
+    border-radius: 10px;
+    margin-left: 35px;
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.txt-criarconta {
+    color: #6366F1;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1em;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+.txt-criarconta2 {
+    color: #6366F1;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1em;
+    margin-left: 35px;
+    margin-top: 5px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.txt-sobre {
+    color: black;
+    font-family: poppins;
+    font-weight: 400;
+    font-size: 1em;
+    margin-left: 35px;
+    margin-top: 50px;
+}
+
+.txt-sobre:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.txt-criarconta2:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.txt-criarconta:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.background-colorr {
+    background-color: #6366F1;
+}
+
+.logo2 {
+    width: 200px;
+}
+
+.div23 {
+    height: 100vh;
+    width: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+}
+
+.p1 {
+    font-size: 1em;
+    font-weight: 400;
+    font-family: poppins;
+    color: red;
+    margin-left: 30px;
+}

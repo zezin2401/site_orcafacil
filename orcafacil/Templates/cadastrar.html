@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/login.css">
+    <title>Orça Fácil</title>
+</head>
+<body>
+    <div class="d-flex">
+        <div class="div1login">
+            <img class="logo-login" src="static/img/OrçaFácil (3).png">
+
+            <h1 class="tit1" >Acesse o OrçaFácil</h1>
+
+            <form action="{{ url_for('cadastrar') }}" method="POST">
+                <label class="txt-form" >Digite seu nome</label><br>
+               <input class="label-lgn" type="text" id="nome" name="nome"><br><br>
+                <label class="txt-form" >Digite seu E-mail</label><br>
+               <input class="label-lgn" type="email" id="email" name="email"><br><br>
+                <label class="txt-form" >Senha</label><br>
+                <input class="label-lgn"  type="text" id="senha" name="senha"><br><br>
+                <button class="btn-lgn" type="submit">CADASTRAR</button>
+            </form>
+
+            <br>
+
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                        {% for category, message in messages %}
+                            <p class="p1">*{{ message }}</p>
+                        {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+
+                    <br><br>
+            <a href="{{ url_for('login') }}" class="txt-criarconta">Já tenho uma conta</a>
+            <h2 class="txt-criarconta2" >Não recebeu instruções de confirmação?</h2>
+
+            <div class="d-flex" >
+                <h3 class="txt-sobre" >Sobre</h3>
+                <h3 class="txt-sobre"  >Privacidade</h3>
+                <h3 class="txt-sobre"  >Termos de uso</h3>
+            </div>
+
+        </div>
+
+        <div class=" div23 background-colorr" >
+            <img class="logo2 center" src="static/img/eta.png">
+        </div>
+    </div>
+
+</body>
+</html>
